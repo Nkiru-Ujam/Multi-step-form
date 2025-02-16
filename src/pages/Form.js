@@ -58,6 +58,7 @@ function reducer(state, action) {
     case "mustContainPhoneNo":
       return {
         ...state,
+        nameErrMsg: "",
         emailErrMsg: "",
         phoneNoErrMsg: (state.phoneNoErrMsg = "This field is required"),
         nextPage: false,
@@ -66,6 +67,7 @@ function reducer(state, action) {
     case "validatePhoneNo":
       return {
         ...state,
+        nameErrMsg: "",
         emailErrMsg: "",
         phoneNoErrMsg: (state.phoneNoErrMsg =
           "Phone number must contain 11 digits"),
