@@ -7,16 +7,15 @@ import Button from "../components/Button";
 function Summary() {
   const [summaryData, setSummaryData] = useState([]);
   const navigate = useNavigate();
-  const { details, addOnsDetails, onAddOns, active, onActive } =
-    useContext(FormContext);
+  const { details, addOnsDetails, active } = useContext(FormContext);
   const addOnServices = summaryData.slice(1);
 
   function handleNavigate() {
     navigate("/plans");
-    onActive(false);
-    onAddOns((addOns) =>
-      addOns.map((addon) => ({ ...addon, completed: false }))
-    );
+    // onActive(false);
+    // onAddOns((addOns) =>
+    //   addOns.map((addon) => ({ ...addon, completed: false }))
+    // );
   }
 
   function handlePrev() {

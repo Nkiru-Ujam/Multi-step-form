@@ -7,7 +7,7 @@ const initialDetails = [
       monthly: 9,
       yearly: 90,
     },
-    selected: false,
+    selected: true,
   },
   {
     icon: "../images/icon-advanced.svg",
@@ -38,7 +38,7 @@ const addOns = [
       monthly: 1,
       yearly: 10,
     },
-    completed: false,
+    completed: true,
   },
 
   {

@@ -160,7 +160,7 @@ a.active {
 
 .plan.active {
   border: 1px solid var(--Purplish-blue);
-  background-color: var(--Magnolia);
+  background-color: var(--Light-gray);
 }
 
 .plan h3 {
@@ -333,7 +333,7 @@ input:focus + .slider {
 }
 
 .addOns-list.active {
-  background-color: var(--Magnolia);
+  background-color: var(--Light-gray);
   border: 1px solid var(--Purplish-blue);
 }
 

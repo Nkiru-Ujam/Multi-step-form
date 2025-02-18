@@ -4,27 +4,10 @@ import { useContext } from "react";
 import { FormContext } from "../components/FormProvider";
 import Button from "../components/Button";
 
-// {
-//   details,
-//   active,
-//   setActive,
-//   onToggle,
-//   onPlanClick,
-// // }
 function SelectPlan() {
   const navigate = useNavigate();
   const { details, active, onToggle, onPlanClick } = useContext(FormContext);
 
-  // useEffect(
-  //   function () {
-  //     const newState = localStorage.getItem("toggleState") === true;
-  //     // if (!active) return;
-  //     setActive(newState);
-  //   },
-  //   [setActive]
-  // );
-
-  // console.log(active);
   return (
     <div className="form-cont">
       <h1>Select your plan</h1>
@@ -48,12 +31,12 @@ function SelectPlan() {
         <label className={`switch ${active ? "toggle-switch" : ""}`}>
           <input
             type="checkbox"
-            value={active}
+            checked={active}
             onChange={(e) => {
               onToggle(e);
             }}
           />
-          <span className="slider round" onClick={() => {}}></span>
+          <span className="slider round"></span>
         </label>
         <p
           style={!active ? { color: "gray" } : { color: "hsl(213, 96%, 18%)" }}

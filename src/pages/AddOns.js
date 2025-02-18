@@ -3,13 +3,12 @@ import AddOnsList from "../components/AddOnsList";
 import Button from "../components/Button";
 import { useContext } from "react";
 import { FormContext } from "../components/FormProvider";
-// { active, onActive, addOnsDetails, handleAddOnClick }
 function AddOns() {
   const navigate = useNavigate();
-  const { onActive, addOnsDetails } = useContext(FormContext);
+  const { addOnsDetails } = useContext(FormContext);
 
   function goBack() {
-    onActive(false);
+    // onActive(false);
     navigate("/plans");
   }
 

@@ -2,17 +2,13 @@ import { useContext } from "react";
 import { FormContext } from "./FormProvider";
 
 function AddOnsList({ addOns }) {
-  //   console.log(handleAddOnClick(addOns.addOn));
-  // console.log(addOns);
   const { active, onAddOnClick } = useContext(FormContext);
   return (
-    <div
-      className={`addOns-list ${addOns.completed || active ? "active" : ""}`}
-    >
+    <div className={`addOns-list ${addOns.completed ? "active" : ""}`}>
       <div className="check-cont">
         <input
           type="checkbox"
-          value={addOns.completed}
+          checked={addOns.completed}
           onChange={() => {
             onAddOnClick(addOns.addOn);
           }}
